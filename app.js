@@ -1,4 +1,5 @@
 const MD5 = require('js-md5');
+// const MD5 = require('./uitls/md5');
 
 function BSTree() {
 	this.root = null;
