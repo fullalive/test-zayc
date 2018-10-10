@@ -95,10 +95,11 @@ const main = () => {
 	const history = new BSTree();
 	let array = [0, 5, 10, 0, 11, 14, 13, 4, 11, 8, 8, 7, 1, 4, 12, 11];
 	let steps = 0;
-	let arrHash = MD5(array);
-	let isInHistory = history.get(arrHash);
+	let arrHash;
+	let isInHistory = false;
 
 	while (!isInHistory) {
+		arrHash = MD5(array);
 		const max = findMax(array);
 		history.add(arrHash, steps);
 		array = changeArray(array, max);
